@@ -31,7 +31,7 @@ import tensorflow as tf
 # model.save('model')
 
 # Load the model
-loaded_model = tf.saved_model.load('D:\PRML\major_project\model')
+loaded_model = tf.saved_model.load('model')
 
 def logo_prediction(input_data):
     test_image = input_data
