@@ -188,10 +188,10 @@ def main():
     # If the user uploaded a file
     if uploaded_file is not None:
         # Read the contents of the file
-        image = Image.open(uploaded_file)
+        i = Image.open(uploaded_file)
 
         # Display the image
-        st.image(image, caption="Uploaded image", use_column_width=True)
+        st.image(i, caption="Uploaded image", use_column_width=True)
 
 
     # code for Prediction
@@ -200,7 +200,7 @@ def main():
     # creating a button for Prediction
 
     if st.button('Logo Test Result'):
-        logo = logo_prediction(image)
+        logo = logo_prediction(i)
         
         
     st.success(logo)
