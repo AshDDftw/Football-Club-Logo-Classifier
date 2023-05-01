@@ -12,7 +12,7 @@ from rembg.bg import remove
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import array_to_img, img_to_array, load_img
 
-# import torch
+import torch
 # from torch import nn
 # from torch.nn import CrossEntropyLoss
 # from torch.nn.functional import relu
