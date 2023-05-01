@@ -1,27 +1,23 @@
 import numpy as np
 import pickle
 import streamlit as st
-import pickle
+# import pickle
 from PIL import Image
-import os
-import math
-import random
-import numpy as np
-import pandas as pd
+
 # import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 import cv2
 from rembg.bg import remove
 
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import array_to_img, img_to_array, load_img
 
-import torch
-from torch import nn
-from torch.nn import CrossEntropyLoss
-from torch.nn.functional import relu
-from torch.optim import Adam
-from torch.utils.data import DataLoader
+# import torch
+# from torch import nn
+# from torch.nn import CrossEntropyLoss
+# from torch.nn.functional import relu
+# from torch.optim import Adam
+# from torch.utils.data import DataLoader
 
 from torchvision import transforms
 
