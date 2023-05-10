@@ -1,38 +1,21 @@
 import numpy as np
 import pickle
 import streamlit as st
-# import pickle
 from PIL import Image
-
-# import matplotlib.pyplot as plt
-# import seaborn as sns
 import cv2
 from rembg.bg import remove
-
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import array_to_img, img_to_array, load_img
-
 import torch
-# from torch import nn
-# from torch.nn import CrossEntropyLoss
-# from torch.nn.functional import relu
-# from torch.optim import Adam
-# from torch.utils.data import DataLoader
-
 from torchvision import transforms
-
-# import warnings
-# warnings.filterwarnings('ignore')
-
-
 import tensorflow as tf
 
-# # Save the model
-# model.save('model')
 
-# Load the model
+# loading the model
 loaded_model = tf.saved_model.load('model')
 
+
+# pipeline for logo detection
 def logo_prediction(input_data):
     test_image = input_data
 
@@ -137,12 +120,7 @@ def logo_prediction(input_data):
     98: 'wolfsburg',
     99: 'wolves'}
 
-        
-    # removing image background
-    # test_image = remove(test_image)
-
     IMG_SIZE = 64
-
 
     transform = transforms.Compose([transforms.ToTensor()])
 
@@ -171,42 +149,20 @@ def logo_prediction(input_data):
     return result
 
 
-
 def main():
-
-
-    # giving a title
     st.title('Logo Prediction Web App')
-
-
-    # getting the input data from the user
-
-
-    # Create a file uploader widget
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
-    # If the user uploaded a file
+    # checking if the user uploaded a file
     if uploaded_file is not None:
-        # Read the contents of the file
         i = Image.open(uploaded_file)
-
-        # Display the image
         st.image(i, caption="Uploaded image", use_column_width=True)
 
-
-    # code for Prediction
     logo = ''
-
-    # creating a button for Prediction
-
     if st.button('Logo Test Result'):
         logo = logo_prediction(i)
-        
-        
+             
     st.success(logo)
-
-
-
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
-# logo_detection
+# Football Club Logo Detection
 
 # How to detect your logo?
-* Click on the link:(https://ashddftw-logo-detection-logo-detect-web-0s4lfu.streamlit.app/)
+* Click on the link : https://ashddftw-logo-detection-logo-detect-web-0s4lfu.streamlit.app/
 * Go to the "Browse Files" option and select your logo / image-file that you want to detect
 * Click on "Logo Test Result"
 * Enjoy!
